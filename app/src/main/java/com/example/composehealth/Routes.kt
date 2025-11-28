@@ -1,6 +1,7 @@
 package com.example.composehealth
 
 import kotlinx.serialization.Serializable;
+import java.time.LocalDate
 
 @Serializable
 sealed class Routes {
@@ -11,5 +12,17 @@ sealed class Routes {
     data object Sleep: Routes()
 
     @Serializable
-    data object Activity: Routes()
+    data object Profile: Routes()
+
+    @Serializable
+    data object AddNewFood: Routes()
+
+    @Serializable
+    data class FoodSearch(val mealName: String): Routes()
+
+    @Serializable
+    data object AddActivityTrack: Routes()
+
+    @Serializable
+    data object SleepCalculator: Routes()
 }
