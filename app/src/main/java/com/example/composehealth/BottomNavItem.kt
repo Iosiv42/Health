@@ -6,7 +6,8 @@ data class BottomNavItem(
     // Text below icon
     val label: String,
     // Icon
-    val icon: ImageVector,
+    val icon: ImageVector? = null,
+    val iconResId: Int? = null,
     // Route to the specific screen
     val route: Routes,
 )
